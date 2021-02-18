@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fae6dd;
+}
+
+.navlist {
+    display: flex;
+    max-width: 100%;
+    /* background-color: #3b1b06; */
+    /* border: 5px black solid; */
+    padding-left: 5%;
+    color: black;
+    list-style: none;
+    max-height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navlist-item {
+    color: white;
+    margin: 10px;
+    font-weight: 400;
+    transition: ease-in 0.5s;
+    position: relative;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: chocolate;
+}
+
+.navlist-item-novel {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 0 5px;
+    min-width: 160px;
+}
+
+.navlist-item-novel a {
+    display: block;
+    text-decoration: none;
+}
+
+.navlist-item:hover {
+    font-weight: 600;
+    background-color: ivory;
+}
+
+.navlist-novel {
+    display: block;
+    padding-top: 5%;
+}
+
+.navlist-item:hover .navlist-item-novel {
+    display: block;
+    background-color: ivory;
+}
+
+.container {
+    margin: auto 5%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.guide {
+    max-width: 45%;
+    /* border: 5px black solid; */
+    text-align: center;
+    padding: 0 3%;
+}
+
+h1 {
+    font-family: 'Noto Serif', serif;
+    color: black;
+    text-shadow: 5px 5px 0px white;
+    font-size: 8vw;
+}
+
+h3 {
+    font-family: 'Noto Serif', serif;
+    margin: 4px;
+    font-size: 1.5vw;
+    transition: ease-in 0.5s;
+}
+
+p {
+    /* border: 5px black solid; */
+    text-align: left;
+    padding: 2% 15%;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 150%;
+    transition: ease-in 0.5s;
+    font-size: 1.3vw;
+}
+
+.img {
+    max-width: 40%;
+    /* border: 5px black solid; */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
