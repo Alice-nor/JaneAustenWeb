@@ -1,116 +1,190 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 body {
     background-color: #fae6dd;
-}
-
-.navlist {
-    display: flex;
-    max-width: 100%;
-    /* background-color: #3b1b06; */
-    /* border: 5px black solid; */
-    padding-left: 5%;
-    color: black;
-    list-style: none;
-    max-height: 100px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.navlist-item {
-    color: white;
-    margin: 10px;
-    font-weight: 400;
-    transition: ease-in 0.5s;
     position: relative;
+    height: 100%;
 }
 
-a:link {
-    color: black;
+.header {
+    background-color: #fae6dd;
 }
 
-a:visited {
-    color: black;
-}
-
-a:active {
-    color: chocolate;
-}
-
-.navlist-item-novel {
-    display: none;
+.header nav {
+    width: 100%;
+    height: 100vh;
+    background-color: #fae6dd;
     position: absolute;
-    list-style: none;
-    padding: 0 5px;
-    min-width: 160px;
+    top: 60px;
+    left: -100%;
+    font-family: 'Times New Roman', Times, serif;
+    transition: .5s;
 }
 
-.navlist-item-novel a {
+.header nav .navlist {
+    background-color: #fae6dd;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+#menu_control:checked~.header nav {
+    left: 0;
+}
+
+.header .navlist a {
     display: block;
     text-decoration: none;
+    padding: 20px 20px;
+    color: black;
+    border-bottom: 3px double gray;
 }
 
-.navlist-item:hover {
-    font-weight: 600;
-    background-color: ivory;
+.navlist-item-novel a::before {
+    content: '/ ';
 }
 
-.navlist-novel {
+#menu_control {
+    position: absolute;
+    z-index: -2;
+    display: none;
+}
+
+.header {
+    height: 50px;
+}
+
+.header .menu_btn {
+    width: 60px;
+    height: 60px;
     display: block;
-    padding-top: 5%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 2px;
 }
 
-.navlist-item:hover .navlist-item-novel {
+.header .menu_btn span {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
     display: block;
-    background-color: ivory;
+    overflow: hidden;
+}
+
+.header .menu_btn::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    width: 54px;
+    height: 3px;
+    background-color: gray;
+    left: 3px;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 15px 0px gray, 0px -15px 0px gray;
 }
 
 .container {
-    margin: auto 5%;
+    /* 不小心加入下面這行會壞掉！ */
+    /* position: absolute; */
+    top: 60px;
+}
+
+.container img {
+    width: 100%;
+}
+
+.container {
     display: flex;
-    justify-content: start;
+    flex-direction: column-reverse;
     align-items: center;
+    margin: auto;
 }
 
 .guide {
-    max-width: 45%;
-    /* border: 5px black solid; */
     text-align: center;
-    padding: 0 3%;
+    width: 100%;
 }
 
 h1 {
+    padding: 5px;
     font-family: 'Noto Serif', serif;
     color: black;
-    text-shadow: 5px 5px 0px white;
-    font-size: 8vw;
+    text-shadow: 3px 3px 0px white;
+    line-height: 120%;
+    transition: ease-in 0.5s;
 }
 
 h3 {
+    padding: 5px;
     font-family: 'Noto Serif', serif;
     margin: 4px;
-    font-size: 1.5vw;
+    line-height: 140%;
     transition: ease-in 0.5s;
 }
 
 p {
     /* border: 5px black solid; */
     text-align: left;
-    padding: 2% 15%;
+    padding: 0 20px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 150%;
-    transition: ease-in 0.5s;
-    font-size: 1.3vw;
 }
 
 .img {
-    max-width: 40%;
-    /* border: 5px black solid; */
+    padding: 5px;
+    margin: auto;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+
+/* 平板與電腦的尺寸 */
+
+@media screen and (min-width: 768px) {
+    .header .menu_btn {
+        display: none;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .header {
+        display: flex;
+    }
+    .header nav {
+        position: relative;
+        display: flex;
+        width: auto;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+    .header nav .navlist {
+        display: flex;
+    }
+    .header .navlist a {
+        border-bottom: none;
+        background-color: transparent;
+    }
+    .navlist-item-novel {
+        display: none;
+    }
+    .navlist-item:hover .navlist-item-novel {
+        display: block;
+    }
+    .navlist-item-novel a::before {
+        content: '';
+    }
+    .guide {
+        padding: 0px 50px;
+    }
+    .img {
+        width: 100%;
+    }
 }
