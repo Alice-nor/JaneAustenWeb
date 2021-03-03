@@ -57,6 +57,10 @@ body {
     display: none;
 }
 
+.navlist-item-novel {
+    display: none;
+}
+
 .header {
     height: 50px;
 }
@@ -148,6 +152,9 @@ p {
 /* 平板與電腦的尺寸 */
 
 @media screen and (min-width: 768px) {
+    .logo {
+        display: none;
+    }
     .header .menu_btn {
         display: none;
     }
@@ -163,7 +170,10 @@ p {
         width: auto;
         height: auto;
         top: 0;
-        left: 0;
+        left: 50px;
+    }
+    .header .navlist a {
+        padding: 10px 10px;
     }
     .header nav .navlist {
         display: flex;

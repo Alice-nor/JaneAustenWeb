@@ -29,7 +29,7 @@
             <ul class="navlist">
                 <li class="navlist-item"><a href="index.html">Home</a></li>
                 <li class="navlist-item"><a href="#">Biography</a></li>
-                <li class="navlist-item"><a href="#">Novel Adaptation</a>
+                <li class="navlist-item" id="navlist-item"><a href="#">Novel Adaptation</a>
                     <ul class="navlist-item-novel">
                         <a href="#" class="navlist-novel">Emma</a>
                         <a href="#" class="navlist-novel">Pride and Prejudice</a>
@@ -55,6 +55,17 @@
     </div>
 
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#navlist-item').click(function() {
+                $('.navlist-item-novel').toggle();
+            })
+
+        })
+    </script>
 </body>
 
 </html>
