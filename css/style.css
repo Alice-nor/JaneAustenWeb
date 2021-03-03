@@ -87,10 +87,10 @@ body {
     content: '';
     position: absolute;
     margin: auto;
-    width: 54px;
+    width: 40px;
     height: 3px;
     background-color: gray;
-    left: 3px;
+    left: 10px;
     top: 0;
     bottom: 0;
     box-shadow: 0px 15px 0px gray, 0px -15px 0px gray;
@@ -148,6 +148,16 @@ p {
     margin: auto;
 }
 
+footer {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px 0px;
+    color: tan;
+}
+
+footer p {
+    text-align: center;
+}
+
 
 /* 平板與電腦的尺寸 */
 
@@ -157,9 +167,6 @@ p {
     }
     .header .menu_btn {
         display: none;
-    }
-    .container {
-        flex-direction: row;
     }
     .header {
         display: flex;
@@ -187,12 +194,16 @@ p {
     }
     .navlist-item:hover .navlist-item-novel {
         display: block;
+        background-color: white;
     }
     .navlist-item-novel a::before {
         content: '';
     }
+    .container {
+        flex-direction: row;
+    }
     .guide {
-        padding: 0px 50px;
+        padding: 0px 5%;
     }
     .img {
         width: 100%;
