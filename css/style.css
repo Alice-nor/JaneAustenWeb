@@ -111,6 +111,28 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     margin: auto;
+    margin: 10px;
+}
+
+.emmaContainer {
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.emmaContainer img {
+    width: 100%;
+}
+
+.emmaContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin: 10px 0px;
 }
 
 .guide {
@@ -118,8 +140,13 @@ body {
     width: 100%;
 }
 
+.emmaGuide {
+    text-align: center;
+    width: 70%;
+}
+
 h1 {
-    padding: 5px;
+    padding: 10px;
     font-family: 'Noto Serif', serif;
     color: black;
     text-shadow: 3px 3px 0px white;
@@ -138,14 +165,196 @@ h3 {
 p {
     /* border: 5px black solid; */
     text-align: left;
-    padding: 0 20px;
+    padding: 10px 40px;
     font-family: 'Times New Roman', Times, serif;
-    line-height: 150%;
+    line-height: 180%;
+}
+
+.emmaGuide p {
+    text-align: left;
+    padding: 0px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 180%;
 }
 
 .img {
     padding: 5px;
     margin: auto;
+}
+
+.bioImg {
+    padding: 30px 0px;
+    margin: auto;
+}
+
+.emmaImg {
+    padding: 30px 0px;
+    margin: auto;
+    display: none;
+}
+
+.emmaImg2 {
+    display: block;
+    padding: 30px 0px;
+    margin: auto;
+}
+
+.cast {
+    width: 100%;
+    margin: 50px 0px;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    background-image: url(../images/BroughtonCastle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.cast .wrap {
+    width: 80%;
+    margin: auto;
+}
+
+.cast .wrap .actor {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px 10px;
+    margin: 40px 13px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: 4px double #fae6dd;
+    box-shadow: 2px 2px 5px black;
+    box-sizing: border-box;
+    transition: .7s;
+}
+
+.cast .wrap .actor:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px #fae6dd;
+}
+
+.actor img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.actor p {
+    color: seashell;
+    text-align: center;
+    padding: 20px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 180%;
+    /* border: 3px solid red; */
+}
+
+.filmPlace {
+    width: 100%;
+    height: 600px;
+    margin: 40px 0px;
+}
+
+.filmPlace .wrap {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: url('../images/SudeleyCastle1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* border: 3px solid green; */
+}
+
+.filmPlace .wrap .item {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    /* border: 3px solid red; */
+    position: relative;
+}
+
+.filmPlace .wrap .item .text {
+    height: 70%;
+    /* border: 3px solid yellow; */
+    position: absolute;
+    bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px 0px;
+}
+
+.filmPlace .wrap .item .text h3,
+.filmPlace .wrap .item .text h2,
+.filmPlace .wrap .item .text p {
+    text-align: center;
+    color: seashell;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.filmPlace .wrap .item .text h3 {
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.filmPlace .wrap .item .text h2 {
+    line-height: 180%;
+    margin: 10px;
+}
+
+.filmPlace-2 {
+    width: 100%;
+    height: 600px;
+    margin: 40px 0px;
+}
+
+.filmPlace-2 .wrap {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: url('../images/StanwayHouse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* border: 3px solid green; */
+}
+
+.filmPlace-2 .wrap .item {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    /* border: 3px solid red; */
+    position: relative;
+}
+
+.filmPlace-2 .wrap .item .text {
+    height: 70%;
+    /* border: 3px solid yellow; */
+    position: absolute;
+    bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px 0px;
+}
+
+.filmPlace-2 .wrap .item .text h3,
+.filmPlace-2 .wrap .item .text h2,
+.filmPlace-2 .wrap .item .text p {
+    text-align: center;
+    color: seashell;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.filmPlace-2 .wrap .item .text h3 {
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.filmPlace-2 .wrap .item .text h2 {
+    line-height: 180%;
+    margin: 10px;
 }
 
 footer {
@@ -194,7 +403,7 @@ footer p {
     }
     .navlist-item:hover .navlist-item-novel {
         display: block;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.3)
     }
     .navlist-item-novel a::before {
         content: '';
@@ -202,10 +411,39 @@ footer p {
     .container {
         flex-direction: row;
     }
+    .emmaContainer {
+        flex-direction: row;
+    }
     .guide {
+        padding: 0px 5%;
+    }
+    .emmaGuide {
         padding: 0px 5%;
     }
     .img {
         width: 100%;
+    }
+    .bioImg {
+        padding: 30px 0;
+        width: 100%;
+    }
+    .emmaImg {
+        display: block;
+        padding: 30px 0;
+        width: 100%;
+    }
+    .emmaImg2 {
+        display: none;
+    }
+    .cast .wrap {
+        display: flex;
+        width: 80%;
+        height: 100%;
+        /* border: 3px solid green; */
+        padding: 50px;
+    }
+    .cast .wrap .actor {
+        width: 20%;
+        margin: auto;
     }
 }

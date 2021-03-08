@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know About Jane Austen</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#">
+                <img src="images/favicon.ico" alt="我的網站">
+            </a>
+        </h1>
+
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+
+        <nav>
+            <ul class="navlist">
+                <li class="navlist-item"><a href="index.html">Home</a></li>
+                <li class="navlist-item"><a href="biography.html">Biography</a></li>
+                <li class="navlist-item" id="navlist-item"><a href="#">Novel Adaptation</a>
+                    <ul class="navlist-item-novel">
+                        <a href="emma.html" class="navlist-novel">Emma</a>
+                        <a href="#" class="navlist-novel">Pride and Prejudice</a>
+                        <a href="#" class="navlist-novel">Sense and Sensibility</a>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="emmaContainer">
+        <div class="emmaImg">
+            <img src="images/emmapic.png" alt="Emma">
+        </div>
+        <div class="emmaImg2">
+            <img src="images/emmapic2.png" alt="Emma">
+        </div>
+        <div class="emmaGuide">
+            <h1>Emma</h1>
+            <h3>- 1996 TV serie -</h3>
+            <p>這部1996年由英國電視台製作的電視劇——Emma，是改編自珍·奧斯汀的同名小說《Emma》，導演為Diarmuid Lawrence。這部電視劇收穫大多數評論家們的正面評論，評論家們認為這是部非常優秀的電視劇。人們專注於女主角Beckinsale的好演技。在1996年的11月24日上映於ITV，收穫超過一千兩百多萬人的觀看數。（資料來源：WIKI）</p>
+        </div>
+
+    </div>
+
+    <div class="cast">
+        <div class="wrap">
+            <div class="actor">
+                <img src="images/actor.jpg" alt="George Knightley">
+                <div class="text">
+                    <p>Mark Strong as George Knightley</p>
+                </div>
+            </div>
+            <div class="actor">
+                <img src="images/actress.jpg" alt="Emma Woodhouse">
+                <div class="text">
+                    <p>Kate Beckinsale as Emma Woodhouse</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sudeley Castle -->
+    <div class="filmPlace">
+        <div class="wrap">
+            <div class="item">
+                <div class="text">
+                    <h3>Filming Place：</h3>
+                    <h2>Sudeley Castle</h2>
+                    <p>Broughton Castle is a medieval fortified manor house in the village of Broughton which is about two miles south-west of Banbury, Oxfordshire, England. The castle was built as a manor house by Sir John de Broughton in 1300 at a location
+                        where the confluence of three streams created a natural site for a moated manor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Stanway House -->
+    <div class="filmPlace-2">
+        <div class="wrap">
+            <div class="item">
+                <div class="text">
+                    <h3>Filming Place：</h3>
+                    <h2>Stanway House</h2>
+                    <p>Stanway House is a Jacobean manor house, located near the village of Stanway in Gloucestershire, England. The manor of Stanway was owned by Tewkesbury Abbey for 800 years then for 500 years by the Tracy family and their descendants,
+                        the Earls of Wemyss and March.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <p>&copy; copyright 2021 Alice</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#navlist-item').click(function() {
+                $('.navlist-item-novel').toggle();
+            })
+
+        })
+    </script>
+
+
+
+</body>
+
+</html>
