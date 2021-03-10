@@ -298,7 +298,7 @@ p {
 .filmPlace .wrap .item .text:hover {
     border-radius: 0%;
     transform: translateY(-10px);
-    background-color: #391a05;
+    border: 4px double #fae6dd;
     color: white;
 }
 
@@ -364,7 +364,7 @@ p {
 .filmPlace-2 .wrap .item .text:hover {
     border-radius: 0%;
     transform: translateY(-10px);
-    background-color: #391a05;
+    border: 4px double #fae6dd;
     color: white;
 }
 
