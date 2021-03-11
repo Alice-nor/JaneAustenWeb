@@ -96,6 +96,9 @@ body {
     box-shadow: 0px 15px 0px gray, 0px -15px 0px gray;
 }
 
+
+/* index & bio */
+
 .container {
     /* 不小心加入下面這行會壞掉！ */
     /* position: absolute; */
@@ -114,35 +117,19 @@ body {
     margin: 10px;
 }
 
-.emmaContainer {
-    top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-}
-
-.emmaContainer img {
-    width: 100%;
-}
-
-.emmaContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin: 10px 0px;
-}
-
 .guide {
     text-align: center;
     width: 100%;
 }
 
-.emmaGuide {
-    text-align: center;
-    width: 70%;
+.img {
+    padding: 5px;
+    margin: auto;
+}
+
+.bioImg {
+    padding: 30px 0px;
+    margin: auto;
 }
 
 h1 {
@@ -170,21 +157,33 @@ p {
     line-height: 180%;
 }
 
+
+/* emma */
+
+.emmaContainer {
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.emmaContainer img {
+    width: 100%;
+}
+
+.emmaGuide {
+    text-align: center;
+    width: 70%;
+}
+
 .emmaGuide p {
     text-align: left;
     padding: 0px 0px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 180%;
-}
-
-.img {
-    padding: 5px;
-    margin: auto;
-}
-
-.bioImg {
-    padding: 30px 0px;
-    margin: auto;
 }
 
 .emmaImg {
@@ -198,6 +197,45 @@ p {
     padding: 30px 0px;
     margin: auto;
 }
+
+
+/* pride and prejudice */
+
+.prideContainer {
+    top: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.prideContainer img {
+    width: 100%;
+}
+
+.prideGuide {
+    text-align: center;
+    width: 70%;
+}
+
+.prideGuide p {
+    text-align: left;
+    padding: 0px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 180%;
+}
+
+.prideImg {
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin: auto;
+}
+
+
+/* emma cast */
 
 .cast {
     width: 100%;
@@ -257,6 +295,134 @@ p {
     /* border: 3px solid red; */
 }
 
+
+/* emma cast */
+
+.cast {
+    width: 100%;
+    margin: 50px 0px;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    background-image: url(../images/BroughtonCastle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.cast .wrap {
+    width: 80%;
+    margin: auto;
+}
+
+.cast h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.cast .wrap .actor {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px 10px;
+    margin: 40px 13px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: 4px double #fae6dd;
+    box-shadow: 2px 2px 5px black;
+    box-sizing: border-box;
+    transition: .7s;
+}
+
+.cast .wrap .actor:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px #fae6dd;
+}
+
+.actor img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.actor p {
+    color: seashell;
+    text-align: center;
+    padding: 20px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 180%;
+    /* border: 3px solid red; */
+}
+
+
+/* pride & prejudice */
+
+.pridecast {
+    width: 100%;
+    margin: 50px 0px;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .5);
+    background-image: url(../images/Chatsworth.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.pridecast .wrap {
+    width: 80%;
+    margin: auto;
+}
+
+.pridecast h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.pridecast .wrap .prideActor {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px 10px;
+    margin: 40px 13px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: 4px double #fae6dd;
+    box-shadow: 2px 2px 5px black;
+    box-sizing: border-box;
+    transition: .7s;
+}
+
+.pridecast .wrap .prideActor:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px #fae6dd;
+}
+
+.prideActor img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.prideActor p {
+    color: seashell;
+    text-align: center;
+    padding: 20px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 180%;
+    /* border: 3px solid red; */
+}
+
+
+/* emma */
+
 .filmPlace {
     width: 100%;
     height: 700px;
@@ -279,27 +445,33 @@ p {
     height: 100%;
     margin: auto;
     position: relative;
+    /* border: 3px solid blue; */
 }
 
 .filmPlace .wrap .item .text {
-    height: 70%;
+    width: 100%;
+    height: 30%;
     /* border: 3px solid yellow; */
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all .5s ease-in;
+    transition: all .7s ease-in;
 }
 
 .filmPlace .wrap .item .text:hover {
+    height: 70%;
     border-radius: 0%;
-    transform: translateY(-10px);
     border: 4px double #fae6dd;
     color: white;
+}
+
+.filmPlace .wrap .item .text:hover p {
+    display: block;
 }
 
 .filmPlace .wrap .item .text h3,
@@ -322,17 +494,21 @@ p {
     margin-bottom: 0px;
 }
 
+.filmPlace .wrap .item .text p {
+    display: none;
+}
+
 .filmPlace-2 {
     width: 100%;
-    height: 600px;
-    margin: 20px 0px;
+    height: 700px;
+    margin: 40px 0px;
 }
 
 .filmPlace-2 .wrap {
     width: 90%;
     height: 100%;
     margin: auto;
-    background: url('../images/StanwayHouse.jpg');
+    background: url('../images/StanwayHouse 2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -343,29 +519,34 @@ p {
     width: 85%;
     height: 100%;
     margin: auto;
-    /* border: 3px solid red; */
+    /* border: 1px solid red; */
     position: relative;
 }
 
 .filmPlace-2 .wrap .item .text {
-    height: 70%;
+    width: 100%;
+    height: 30%;
     /* border: 3px solid yellow; */
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all .5s ease-in;
+    transition: all .7s ease-in-out;
 }
 
 .filmPlace-2 .wrap .item .text:hover {
+    height: 70%;
     border-radius: 0%;
-    transform: translateY(-10px);
     border: 4px double #fae6dd;
     color: white;
+}
+
+.filmPlace-2 .wrap .item .text:hover p {
+    display: block;
 }
 
 .filmPlace-2 .wrap .item .text h3,
@@ -386,6 +567,252 @@ p {
     line-height: 180%;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+.filmPlace-2 .wrap .item .text p {
+    display: none;
+}
+
+
+/* pride and prejudice */
+
+
+/* filmPlace-3 */
+
+.filmPlace {
+    width: 100%;
+    height: 700px;
+    margin: 40px 0px;
+}
+
+.filmPlace .wrap {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: url('../images/chatsworthHouse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* border: 3px solid green; */
+}
+
+.filmPlace .wrap .item {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    /* border: 3px solid blue; */
+}
+
+.filmPlace .wrap .item .text {
+    width: 100%;
+    height: 30%;
+    /* border: 3px solid yellow; */
+    position: absolute;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .7s ease-in;
+}
+
+.filmPlace .wrap .item .text:hover {
+    height: 70%;
+    border-radius: 0%;
+    border: 4px double #fae6dd;
+    color: white;
+}
+
+.filmPlace .wrap .item .text:hover p {
+    display: block;
+}
+
+.filmPlace .wrap .item .text h3,
+.filmPlace .wrap .item .text h2,
+.filmPlace .wrap .item .text p {
+    text-align: center;
+    color: seashell;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.filmPlace .wrap .item .text h3 {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    font-size: 1rem;
+}
+
+.filmPlace .wrap .item .text h2 {
+    line-height: 180%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.filmPlace .wrap .item .text p {
+    display: none;
+}
+
+
+/* filmPlace-2 */
+
+.filmPlace-2 {
+    width: 100%;
+    height: 700px;
+    margin: 40px 0px;
+}
+
+.filmPlace-2 .wrap {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: url('../images/stangeEdge.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* border: 3px solid green; */
+}
+
+.filmPlace-2 .wrap .item {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.filmPlace-2 .wrap .item .text {
+    width: 100%;
+    height: 30%;
+    /* border: 3px solid yellow; */
+    position: absolute;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .7s ease-in-out;
+}
+
+.filmPlace-2 .wrap .item .text:hover {
+    height: 70%;
+    border-radius: 0%;
+    border: 4px double #fae6dd;
+    color: white;
+}
+
+.filmPlace-2 .wrap .item .text:hover p {
+    display: block;
+}
+
+.filmPlace-2 .wrap .item .text h3,
+.filmPlace-2 .wrap .item .text h2,
+.filmPlace-2 .wrap .item .text p {
+    text-align: center;
+    color: seashell;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.filmPlace-2 .wrap .item .text h3 {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    font-size: 1rem;
+}
+
+.filmPlace-2 .wrap .item .text h2 {
+    line-height: 180%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.filmPlace-2 .wrap .item .text p {
+    display: none;
+}
+
+
+/* filmPlace-3 */
+
+.filmPlace-3 {
+    width: 100%;
+    height: 700px;
+    margin: 40px 0px;
+}
+
+.filmPlace-3 .wrap {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: url('../images/Forest.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* border: 3px solid green; */
+}
+
+.filmPlace-3 .wrap .item {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.filmPlace-3 .wrap .item .text {
+    width: 100%;
+    height: 30%;
+    /* border: 3px solid yellow; */
+    position: absolute;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .7s ease-in-out;
+}
+
+.filmPlace-3 .wrap .item .text:hover {
+    height: 70%;
+    border-radius: 0%;
+    border: 4px double #fae6dd;
+    color: white;
+}
+
+.filmPlace-3 .wrap .item .text:hover p {
+    display: block;
+}
+
+.filmPlace-3 .wrap .item .text h3,
+.filmPlace-3 .wrap .item .text h2,
+.filmPlace-3 .wrap .item .text p {
+    text-align: center;
+    color: seashell;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.filmPlace-3 .wrap .item .text h3 {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    font-size: 1rem;
+}
+
+.filmPlace-3 .wrap .item .text h2 {
+    line-height: 180%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px 30px;
+}
+
+.filmPlace-3 .wrap .item .text p {
+    display: none;
+}
+
+.filmPlace-3 img {
+    display: none;
 }
 
 footer {
@@ -434,21 +861,16 @@ footer p {
     }
     .navlist-item:hover .navlist-item-novel {
         display: block;
-        background-color: rgba(255, 255, 255, 0.3)
+        background-color: rgba(255, 255, 255, 0.8)
     }
     .navlist-item-novel a::before {
         content: '';
     }
+    /* index & bio */
     .container {
         flex-direction: row;
     }
-    .emmaContainer {
-        flex-direction: row;
-    }
     .guide {
-        padding: 0px 5%;
-    }
-    .emmaGuide {
         padding: 0px 5%;
     }
     .img {
@@ -458,14 +880,34 @@ footer p {
         padding: 30px 0;
         width: 100%;
     }
+    /* emma */
+    .emmaContainer {
+        flex-direction: row;
+    }
+    .emmaGuide {
+        padding: 0px 5%;
+    }
     .emmaImg {
         display: block;
         padding: 30px 0;
         width: 100%;
     }
     .emmaImg2 {
-        display: none;
+        width: 100%;
     }
+    /* pride & prejudice */
+    .prideContainer {
+        flex-direction: row;
+    }
+    .prideGuide {
+        padding: 0px 5%;
+    }
+    .prideImg {
+        display: block;
+        padding: 30px 70px;
+        width: 70%;
+    }
+    /* emma */
     .cast .wrap {
         display: flex;
         width: 80%;
@@ -476,5 +918,99 @@ footer p {
     .cast .wrap .actor {
         width: 20%;
         margin: auto;
+    }
+    /* pride & prejudice */
+    .pridecast .wrap {
+        display: flex;
+        width: 80%;
+        height: 100%;
+        /* border: 3px solid green; */
+        padding: 50px;
+    }
+    .pridecast .wrap .prideActor {
+        width: 20%;
+        margin: auto;
+    }
+    /* emma */
+    .filmPlace .wrap .item .text {
+        width: 40%;
+        height: 30%;
+        right: 0px;
+    }
+    .filmPlace .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .filmPlace .wrap .item .text:hover h3 {
+        font-size: 2rem;
+    }
+    .filmPlace .wrap .item .text:hover h2 {
+        font-size: 3rem;
+    }
+    .filmPlace .wrap .item .text:hover p {
+        font-size: 1.3rem;
+        padding: 0px 120px;
+    }
+    /* filmPlace-2 */
+    .filmPlace-2 .wrap .item .text {
+        width: 40%;
+        height: 30%;
+        right: 0px;
+    }
+    .filmPlace-2 .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .filmPlace-2 .wrap .item .text:hover h3 {
+        font-size: 2rem;
+    }
+    .filmPlace-2 .wrap .item .text:hover h2 {
+        font-size: 3rem;
+    }
+    .filmPlace-2 .wrap .item .text:hover p {
+        font-size: 1.3rem;
+        padding: 0px 120px;
+    }
+    /* filmPlace-3 */
+    .filmPlace-3 .wrap .item .text {
+        width: 40%;
+        height: 30%;
+        right: 0px;
+    }
+    .filmPlace-3 .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .filmPlace-2 .wrap .item .text:hover h3 {
+        font-size: 2rem;
+    }
+    .filmPlace-3 .wrap .item .text:hover h2 {
+        font-size: 3rem;
+    }
+    .filmPlace-3 .wrap .item .text:hover p {
+        font-size: 1.3rem;
+        padding: 0px 120px;
+    }
+    .filmPlace-3 .wrap .item .text:hover img {
+        display: block;
+        position: absolute;
+        width: 15%;
+        top: 30px;
+        right: 30px;
+    }
+    footer p {
+        text-align: center;
     }
 }
