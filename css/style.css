@@ -1061,6 +1061,7 @@ footer p {
     }
     .bioImg {
         padding: 30px 0;
+        padding-right: 40px;
         width: 100%;
     }
     /* emma */
@@ -1077,6 +1078,7 @@ footer p {
     }
     .emmaImg2 {
         width: 100%;
+        display: none;
     }
     /* pride & prejudice */
     .prideContainer {
@@ -1099,8 +1101,9 @@ footer p {
     }
     .senseImg {
         display: block;
-        padding: 30px 0;
-        width: 100%;
+        padding: 30px 0px;
+        padding-left: 50px;
+        width: 80%;
     }
     /* emma */
     .cast .wrap {
