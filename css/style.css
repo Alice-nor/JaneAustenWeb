@@ -421,7 +421,7 @@ p {
 }
 
 
-/* emma */
+/* emma filePlace */
 
 .filmPlace {
     width: 100%;
@@ -576,16 +576,13 @@ p {
 
 /* pride and prejudice */
 
-
-/* filmPlace-3 */
-
-.filmPlace {
+.prideFilmPlace {
     width: 100%;
     height: 700px;
     margin: 40px 0px;
 }
 
-.filmPlace .wrap {
+.prideFilmPlace .wrap {
     width: 90%;
     height: 100%;
     margin: auto;
@@ -596,7 +593,7 @@ p {
     /* border: 3px solid green; */
 }
 
-.filmPlace .wrap .item {
+.prideFilmPlace .wrap .item {
     width: 85%;
     height: 100%;
     margin: auto;
@@ -604,7 +601,7 @@ p {
     /* border: 3px solid blue; */
 }
 
-.filmPlace .wrap .item .text {
+.prideFilmPlace .wrap .item .text {
     width: 100%;
     height: 30%;
     /* border: 3px solid yellow; */
@@ -619,51 +616,48 @@ p {
     transition: all .7s ease-in;
 }
 
-.filmPlace .wrap .item .text:hover {
+.prideFilmPlace .wrap .item .text:hover {
     height: 70%;
     border-radius: 0%;
     border: 4px double #fae6dd;
     color: white;
 }
 
-.filmPlace .wrap .item .text:hover p {
+.prideFilmPlace .wrap .item .text:hover p {
     display: block;
 }
 
-.filmPlace .wrap .item .text h3,
-.filmPlace .wrap .item .text h2,
-.filmPlace .wrap .item .text p {
+.prideFilmPlace .wrap .item .text h3,
+.prideFilmPlace .wrap .item .text h2,
+.prideFilmPlace .wrap .item .text p {
     text-align: center;
     color: seashell;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.filmPlace .wrap .item .text h3 {
+.prideFilmPlace .wrap .item .text h3 {
     margin-top: 15px;
     margin-bottom: -15px;
     font-size: 1rem;
 }
 
-.filmPlace .wrap .item .text h2 {
+.prideFilmPlace .wrap .item .text h2 {
     line-height: 180%;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
-.filmPlace .wrap .item .text p {
+.prideFilmPlace .wrap .item .text p {
     display: none;
 }
 
-
-/* filmPlace-2 */
-
-.filmPlace-2 {
+.prideFilmPlace-2 {
     width: 100%;
     height: 700px;
     margin: 40px 0px;
 }
 
-.filmPlace-2 .wrap {
+.prideFilmPlace-2 .wrap {
     width: 90%;
     height: 100%;
     margin: auto;
@@ -674,7 +668,7 @@ p {
     /* border: 3px solid green; */
 }
 
-.filmPlace-2 .wrap .item {
+.prideFilmPlace-2 .wrap .item {
     width: 85%;
     height: 100%;
     margin: auto;
@@ -682,7 +676,7 @@ p {
     position: relative;
 }
 
-.filmPlace-2 .wrap .item .text {
+.prideFilmPlace-2 .wrap .item .text {
     width: 100%;
     height: 30%;
     /* border: 3px solid yellow; */
@@ -697,51 +691,51 @@ p {
     transition: all .7s ease-in-out;
 }
 
-.filmPlace-2 .wrap .item .text:hover {
+.prideFilmPlace-2 .wrap .item .text:hover {
     height: 70%;
     border-radius: 0%;
     border: 4px double #fae6dd;
     color: white;
 }
 
-.filmPlace-2 .wrap .item .text:hover p {
+.prideFilmPlace-2 .wrap .item .text:hover p {
     display: block;
 }
 
-.filmPlace-2 .wrap .item .text h3,
-.filmPlace-2 .wrap .item .text h2,
-.filmPlace-2 .wrap .item .text p {
+.prideFilmPlace-2 .wrap .item .text h3,
+.prideFilmPlace-2 .wrap .item .text h2,
+.prideFilmPlace-2 .wrap .item .text p {
     text-align: center;
     color: seashell;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.filmPlace-2 .wrap .item .text h3 {
+.prideFilmPlace-2 .wrap .item .text h3 {
     margin-top: 15px;
     margin-bottom: -15px;
     font-size: 1rem;
 }
 
-.filmPlace-2 .wrap .item .text h2 {
+.prideFilmPlace-2 .wrap .item .text h2 {
     line-height: 180%;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
-.filmPlace-2 .wrap .item .text p {
+.prideFilmPlace-2 .wrap .item .text p {
     display: none;
 }
 
 
 /* filmPlace-3 */
 
-.filmPlace-3 {
+.prideFilmPlace-3 {
     width: 100%;
     height: 700px;
     margin: 40px 0px;
 }
 
-.filmPlace-3 .wrap {
+.prideFilmPlace-3 .wrap {
     width: 90%;
     height: 100%;
     margin: auto;
@@ -752,15 +746,15 @@ p {
     /* border: 3px solid green; */
 }
 
-.filmPlace-3 .wrap .item {
+.prideFilmPlace-3 .wrap .item {
     width: 85%;
     height: 100%;
     margin: auto;
-    /* border: 1px solid red; */
     position: relative;
+    /* border: 3px solid blue; */
 }
 
-.filmPlace-3 .wrap .item .text {
+.prideFilmPlace-3 .wrap .item .text {
     width: 100%;
     height: 30%;
     /* border: 3px solid yellow; */
@@ -772,46 +766,45 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all .7s ease-in-out;
+    transition: all .7s ease-in;
 }
 
-.filmPlace-3 .wrap .item .text:hover {
+.prideFilmPlace-3 .wrap .item .text:hover {
     height: 70%;
     border-radius: 0%;
     border: 4px double #fae6dd;
     color: white;
 }
 
-.filmPlace-3 .wrap .item .text:hover p {
+.prideFilmPlace-3 .wrap .item .text:hover p {
     display: block;
 }
 
-.filmPlace-3 .wrap .item .text h3,
-.filmPlace-3 .wrap .item .text h2,
-.filmPlace-3 .wrap .item .text p {
+.prideFilmPlace-3 .wrap .item .text h3,
+.prideFilmPlace-3 .wrap .item .text h2,
+.prideFilmPlace-3 .wrap .item .text p {
     text-align: center;
     color: seashell;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.filmPlace-3 .wrap .item .text h3 {
+.prideFilmPlace-3 .wrap .item .text h3 {
     margin-top: 15px;
     margin-bottom: -15px;
     font-size: 1rem;
 }
 
-.filmPlace-3 .wrap .item .text h2 {
+.prideFilmPlace-3 .wrap .item .text h2 {
     line-height: 180%;
     margin-top: 10px;
     margin-bottom: 0px;
-    padding: 0px 30px;
 }
 
-.filmPlace-3 .wrap .item .text p {
+.prideFilmPlace-3 .wrap .item .text p {
     display: none;
 }
 
-.filmPlace-3 img {
+.prideFilmPlace-3 img {
     display: none;
 }
 
@@ -979,13 +972,13 @@ footer p {
         font-size: 1.3rem;
         padding: 0px 120px;
     }
-    /* filmPlace-3 */
-    .filmPlace-3 .wrap .item .text {
+    /* pride & prejudice */
+    .prideFilmPlace .wrap .item .text {
         width: 40%;
         height: 30%;
         right: 0px;
     }
-    .filmPlace-3 .wrap .item .text:hover {
+    .prideFilmPlace .wrap .item .text:hover {
         width: 100%;
         height: 70%;
         position: absolute;
@@ -993,17 +986,73 @@ footer p {
         border-radius: 0%;
         padding: 20px 0px;
     }
-    .filmPlace-2 .wrap .item .text:hover h3 {
+    .prideFilmPlace .wrap .item .text:hover h3 {
         font-size: 2rem;
     }
-    .filmPlace-3 .wrap .item .text:hover h2 {
+    .prideFilmPlace .wrap .item .text:hover h2 {
         font-size: 3rem;
     }
-    .filmPlace-3 .wrap .item .text:hover p {
+    .prideFilmPlace .wrap .item .text:hover p {
         font-size: 1.3rem;
         padding: 0px 120px;
     }
-    .filmPlace-3 .wrap .item .text:hover img {
+    /* filmPlace-2 */
+    .prideFilmPlace-2 .wrap .item .text {
+        width: 40%;
+        height: 30%;
+        right: 0px;
+    }
+    .prideFilmPlace-2 .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .prideFilmPlace-2 .wrap .item .text:hover h3 {
+        font-size: 2rem;
+    }
+    .prideFilmPlace-2 .wrap .item .text:hover h2 {
+        font-size: 3rem;
+    }
+    .prideFilmPlace-2 .wrap .item .text:hover p {
+        font-size: 1.3rem;
+        padding: 0px 120px;
+    }
+    /* filmPlace-3 */
+    .prideFilmPlace-3 .wrap .item .text {
+        width: 40%;
+        height: 30%;
+        right: 0px;
+    }
+    .prideFilmPlace-3 .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .prideFilmPlace-3 .wrap .item .text:hover h3 {
+        font-size: 2rem;
+    }
+    .prideFilmPlace-3 .wrap .item .text:hover h2 {
+        font-size: 3rem;
+    }
+    .prideFilmPlace-3 .wrap .item .text:hover p {
+        font-size: 1.3rem;
+        padding: 0px 120px;
+    }
+    .prideFilmPlace-3 .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .prideFilmPlace-3 .wrap .item .text:hover img {
         display: block;
         position: absolute;
         width: 15%;
