@@ -235,64 +235,37 @@ p {
 }
 
 
-/* emma cast */
+/* Sense & Sensibility */
 
-.cast {
-    width: 100%;
-    margin: 50px 0px;
-    padding: 30px 0px;
-    box-sizing: border-box;
-    background-image: url(../images/BroughtonCastle.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
-
-.cast .wrap {
-    width: 80%;
-    margin: auto;
-}
-
-.cast h3 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.cast .wrap .actor {
-    width: 90%;
+.senseContainer {
+    top: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 20px 10px;
-    margin: 40px 13px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    border: 4px double #fae6dd;
-    box-shadow: 2px 2px 5px black;
-    box-sizing: border-box;
-    transition: .7s;
+    width: 100%;
+    margin: 10px 0px;
 }
 
-.cast .wrap .actor:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 3px 10px #fae6dd;
+.senseContainer img {
+    width: 100%;
 }
 
-.actor img {
-    width: 90%;
-    border-radius: 50%;
-}
-
-.actor p {
-    color: seashell;
+.senseGuide {
     text-align: center;
-    padding: 20px 20px;
+    width: 70%;
+}
+
+.senseGuide p {
+    text-align: left;
+    padding: 0px 0px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 180%;
-    /* border: 3px solid red; */
+}
+
+.senseImg {
+    padding: 30px 0px;
+    margin: auto;
 }
 
 
@@ -412,6 +385,67 @@ p {
 }
 
 .prideActor p {
+    color: seashell;
+    text-align: center;
+    padding: 20px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 180%;
+    /* border: 3px solid red; */
+}
+
+
+/* Sense & Sensibility */
+
+.senseCast {
+    width: 100%;
+    margin: 50px 0px;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    background-image: url(../images/Efford\ House.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.senseCast .wrap {
+    width: 80%;
+    margin: auto;
+}
+
+.senseCast h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.senseCast .wrap .senseActor {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px 10px;
+    margin: 40px 13px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    border: 4px double #fae6dd;
+    box-shadow: 2px 2px 5px black;
+    box-sizing: border-box;
+    transition: .7s;
+}
+
+.senseCast .wrap .senseActor:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px #fae6dd;
+}
+
+.senseCast img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.senseCast p {
     color: seashell;
     text-align: center;
     padding: 20px 20px;
@@ -808,6 +842,162 @@ p {
     display: none;
 }
 
+
+/* Sense & Sensibility */
+
+
+/* emma filePlace */
+
+.sensefilmPlace {
+    width: 100%;
+    height: 700px;
+    margin: 40px 0px;
+}
+
+.sensefilmPlace .wrap {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: url('../images/SaltramHouse.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    /* border: 3px solid green; */
+}
+
+.sensefilmPlace .wrap .item {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    /* border: 3px solid blue; */
+}
+
+.sensefilmPlace .wrap .item .text {
+    width: 100%;
+    height: 30%;
+    /* border: 3px solid yellow; */
+    position: absolute;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .7s ease-in;
+}
+
+.sensefilmPlace .wrap .item .text:hover {
+    height: 70%;
+    border-radius: 0%;
+    border: 4px double #fae6dd;
+    color: white;
+}
+
+.sensefilmPlace .wrap .item .text:hover p {
+    display: block;
+}
+
+.sensefilmPlace .wrap .item .text h3,
+.sensefilmPlace .wrap .item .text h2,
+.sensefilmPlace .wrap .item .text p {
+    text-align: center;
+    color: seashell;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sensefilmPlace .wrap .item .text h3 {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    font-size: 1rem;
+}
+
+.sensefilmPlace .wrap .item .text h2 {
+    line-height: 180%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.sensefilmPlace .wrap .item .text p {
+    display: none;
+}
+
+.sensefilmPlace-2 {
+    width: 100%;
+    height: 700px;
+    margin: 40px 0px;
+}
+
+.sensefilmPlace-2 .wrap {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background: url('../images/Barton\ Cottage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* border: 3px solid green; */
+}
+
+.sensefilmPlace-2 .wrap .item {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.sensefilmPlace-2 .wrap .item .text {
+    width: 100%;
+    height: 30%;
+    /* border: 3px solid yellow; */
+    position: absolute;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .7s ease-in-out;
+}
+
+.sensefilmPlace-2 .wrap .item .text:hover {
+    height: 70%;
+    border-radius: 0%;
+    border: 4px double #fae6dd;
+    color: white;
+}
+
+.sensefilmPlace-2 .wrap .item .text:hover p {
+    display: block;
+}
+
+.sensefilmPlace-2 .wrap .item .text h3,
+.sensefilmPlace-2 .wrap .item .text h2,
+.sensefilmPlace-2 .wrap .item .text p {
+    text-align: center;
+    color: seashell;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sensefilmPlace-2 .wrap .item .text h3 {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    font-size: 1rem;
+}
+
+.sensefilmPlace-2 .wrap .item .text h2 {
+    line-height: 180%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.sensefilmPlace-2 .wrap .item .text p {
+    display: none;
+}
+
 footer {
     font-family: 'Times New Roman', Times, serif;
     padding: 30px 0px;
@@ -900,6 +1090,18 @@ footer p {
         padding: 30px 70px;
         width: 70%;
     }
+    /* Sense & Sensibility */
+    .senseContainer {
+        flex-direction: row;
+    }
+    .senseGuide {
+        padding: 0px 5%;
+    }
+    .senseImg {
+        display: block;
+        padding: 30px 0;
+        width: 100%;
+    }
     /* emma */
     .cast .wrap {
         display: flex;
@@ -921,6 +1123,18 @@ footer p {
         padding: 50px;
     }
     .pridecast .wrap .prideActor {
+        width: 20%;
+        margin: auto;
+    }
+    /* Sense & Sensibility */
+    .senseCast .wrap {
+        display: flex;
+        width: 80%;
+        height: 100%;
+        /* border: 3px solid green; */
+        padding: 50px;
+    }
+    .senseCast .wrap .senseActor {
         width: 20%;
         margin: auto;
     }
@@ -1026,6 +1240,9 @@ footer p {
         height: 30%;
         right: 0px;
     }
+    .prideFilmPlace-3 .wrap .item .text h2 {
+        padding: 20px;
+    }
     .prideFilmPlace-3 .wrap .item .text:hover {
         width: 100%;
         height: 70%;
@@ -1058,6 +1275,54 @@ footer p {
         width: 15%;
         top: 30px;
         right: 30px;
+    }
+    /* Sense & Sensibility */
+    .sensefilmPlace .wrap .item .text {
+        width: 40%;
+        height: 30%;
+        right: 0px;
+    }
+    .sensefilmPlace .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .sensefilmPlace .wrap .item .text:hover h3 {
+        font-size: 2rem;
+    }
+    .sensefilmPlace .wrap .item .text:hover h2 {
+        font-size: 3rem;
+    }
+    .sensefilmPlace .wrap .item .text:hover p {
+        font-size: 1.3rem;
+        padding: 0px 120px;
+    }
+    /* filmPlace-2 */
+    .sensefilmPlace-2 .wrap .item .text {
+        width: 40%;
+        height: 30%;
+        right: 0px;
+    }
+    .sensefilmPlace-2 .wrap .item .text:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+    }
+    .sensefilmPlace-2 .wrap .item .text:hover h3 {
+        font-size: 2rem;
+    }
+    .sensefilmPlace-2 .wrap .item .text:hover h2 {
+        font-size: 3rem;
+    }
+    .sensefilmPlace-2 .wrap .item .text:hover p {
+        font-size: 1.3rem;
+        padding: 0px 120px;
     }
     footer p {
         text-align: center;
