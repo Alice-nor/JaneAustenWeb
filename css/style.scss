@@ -1,0 +1,509 @@
+$p-color:#fae6dd;
+$text-color:black;
+$width:100%;
+$title:'Noto Serif',
+serif;
+$text:'Times New Roman',
+Times,
+serif;
+@mixin square($n) {
+    width: $n;
+    height: $n;
+}
+
+// container
+@mixin Container {
+    display: flex;
+    align-items: center;
+    top: 60px;
+}
+
+// 除了 index & bio 之外的 container
+@mixin otherContainer {
+    @include Container;
+    margin: auto;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+@mixin h1 {
+    font-family: $title;
+    color: $text-color;
+    text-shadow: 3px 3px 0px white;
+    line-height: 120%;
+    transition: ease-in 0.5s;
+    padding: 10px;
+}
+
+@mixin h3 {
+    font-family: $title;
+    padding: 5px 0px;
+    margin: 4px;
+    line-height: 140%;
+    transition: ease-in 0.5s;
+}
+
+@mixin p {
+    font-family: $text;
+    text-align: left;
+    line-height: 180%;
+}
+
+@mixin guide {
+    text-align: center;
+    width: 70%;
+    h1 {
+        @include h1;
+    }
+    h3 {
+        @include h3;
+    }
+    p {
+        @include p;
+    }
+}
+
+@mixin cast {
+    width: 100%;
+    margin: 50px 0px;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    h3 {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-family: $title;
+    }
+    .wrap {
+        width: 80%;
+        margin: auto;
+        .actor {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: 20px 10px;
+            margin: 40px 13px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            border: 4px double $p-color;
+            box-shadow: 2px 2px 5px black;
+            box-sizing: border-box;
+            transition: .7s;
+            img {
+                width: 90%;
+                border-radius: 50%;
+            }
+            p {
+                color: seashell;
+                text-align: center;
+                padding: 20px 20px;
+                font-family: $text;
+                line-height: 180%;
+            }
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 3px 3px 10px $p-color;
+            }
+        }
+    }
+}
+
+@mixin filmText {
+    text-align: center;
+    color: seashell;
+    font-family: $text;
+}
+
+@mixin filmPlace {
+    width: 100%;
+    height: 700px;
+    margin: 40px 0px;
+    .wrap {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        .item {
+            width: 85%;
+            height: 100%;
+            margin: auto;
+            position: relative;
+        }
+        .text {
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            bottom: 60px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all .7s ease-in;
+            h3 {
+                @include filmText;
+                margin-top: 15px;
+                margin-bottom: -15px;
+                font-size: 1rem;
+            }
+            h2 {
+                @include filmText;
+                line-height: 180%;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+            p {
+                @include filmText;
+                display: none;
+                line-height: 180%;
+                padding: 10px 40px;
+            }
+            &:hover {
+                height: 70%;
+                border-radius: 0%;
+                border: 4px double $p-color;
+                color: white;
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@import 'reset.scss';
+@import 'nav.scss';
+body {
+    background-color: $p-color;
+    position: relative;
+    height: 100%;
+    .container {
+        flex-direction: column-reverse;
+        margin: 10px;
+        @include Container;
+        .img {
+            padding: 5px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 90%;
+            }
+        }
+        // Bio Page
+        .bioImg {
+            padding: 30px 0px;
+            margin: auto;
+            img {
+                width: 100%;
+            }
+        }
+        .guide {
+            @include guide;
+            p {
+                padding: 10px 5px;
+            }
+        }
+    }
+    // emma
+    .emmaContainer {
+        @include otherContainer;
+        flex-direction: column;
+        .emmaImg {
+            padding: 30px 0px;
+            margin: auto;
+            display: none;
+            img {
+                width: 100%;
+            }
+        }
+        .emmaImg2 {
+            display: block;
+            padding: 30px 0px;
+            margin: auto;
+            img {
+                width: 100%;
+            }
+        }
+        .guide {
+            @include guide;
+        }
+    }
+    .cast {
+        @include cast;
+        background-image: url(../images/BroughtonCastle.png);
+    }
+    .filmPlace {
+        @include filmPlace;
+        .wrap {
+            background-position: center center !important;
+            background: url('../images/SudeleyCastle1.jpg');
+        }
+    }
+    .filmPlace-2 {
+        @include filmPlace;
+        .wrap {
+            background-position: center center !important;
+            background: url('../images/StanwayHouse 2.jpg');
+        }
+    }
+    // Pride & Prejudice
+    .prideContainer {
+        @include otherContainer;
+        flex-direction: column-reverse;
+        .guide {
+            @include guide;
+        }
+        .prideImg {
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 0;
+            margin: auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .pridecast {
+        @include cast;
+        background-image: url(../images/Chatsworth.jpg);
+        background-blend-mode: multiply;
+        background-color: rgba(0, 0, 0, .5);
+        background-position: center center;
+        h3 {
+            color: white;
+        }
+    }
+    .prideFilmPlace {
+        @include filmPlace;
+        .wrap {
+            background-position: center center !important;
+            background: url('../images/chatsworthHouse.jpg');
+        }
+    }
+    .prideFilmPlace-2 {
+        @include filmPlace;
+        .wrap {
+            background-position: center center !important;
+            background: url('../images/stangeEdge.jpg');
+        }
+    }
+    .prideFilmPlace-3 {
+        @include filmPlace;
+        .wrap {
+            background-position: center center !important;
+            background: url('../images/Forest.jpg');
+            img {
+                display: none;
+            }
+        }
+    }
+    // Sense & Sensibility
+    .senseContainer {
+        @include otherContainer();
+        flex-direction: column;
+        .senseImg {
+            padding: 30px 0px;
+            margin: auto;
+            img {
+                width: 100%;
+            }
+        }
+        .guide {
+            @include guide;
+        }
+    }
+    .senseCast {
+        @include cast;
+        background-image: url(../images/EffordHouse.png);
+    }
+    .sensefilmPlace {
+        @include filmPlace;
+        .wrap {
+            background-position: center right !important;
+            background: url('../images/SaltramHouse.jpg');
+        }
+    }
+    .sensefilmPlace-2 {
+        @include filmPlace;
+        .wrap {
+            background-position: center center !important;
+            background: url('../images/Barton\ Cottage.jpg');
+        }
+    }
+    // footer
+    footer {
+        font-family: $text;
+        color: tan;
+        padding: 50px 0px;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+
+/* 平板與電腦的尺寸 的@mixin */
+
+@mixin containerGuide {
+    flex-direction: row;
+    .guide {
+        padding: 0px 5%;
+    }
+}
+
+@mixin guideImg {
+    display: block;
+    padding: 30px 0;
+}
+
+@mixin castWrap {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+    .actor {
+        width: 20%;
+        margin: auto;
+    }
+}
+
+@mixin filmText {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+    &:hover {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 50px;
+        border-radius: 0%;
+        padding: 20px 0px;
+        h3 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.3rem;
+            padding: 0px 120px;
+        }
+    }
+}
+
+
+/* 平板與電腦的尺寸 */
+
+@media screen and (min-width: 768px) {
+    body {
+        .emmaContainer {
+            @include containerGuide;
+            .emmaImg {
+                @include guideImg;
+                width: 100%;
+            }
+            .emmaImg2 {
+                width: 100%;
+                display: none;
+            }
+        }
+        .container {
+            .bioImg {
+                padding: 30px 0;
+                padding-right: 40px;
+                width: 100%;
+            }
+            @include containerGuide;
+            .guide {
+                width: 90%;
+                padding: 0px 5%;
+                p {
+                    padding: 10px 40px;
+                }
+            }
+            .img {
+                width: 100%;
+            }
+        }
+        .cast .wrap {
+            @include castWrap;
+        }
+        .filmPlace {
+            .wrap .item .text {
+                @include filmText;
+            }
+        }
+        .filmPlace-2 {
+            .wrap .item .text {
+                @include filmText;
+            }
+        }
+        .prideContainer {
+            @include containerGuide;
+            .prideImg {
+                @include guideImg;
+                width: 70%;
+            }
+        }
+        .pridecast .wrap {
+            @include castWrap;
+        }
+        .prideFilmPlace {
+            .wrap .item .text {
+                @include filmText;
+            }
+        }
+        .prideFilmPlace-2 {
+            .wrap .item .text {
+                @include filmText;
+            }
+        }
+        .prideFilmPlace-3 {
+            .wrap .item .text {
+                @include filmText;
+                h2 {
+                    padding: 20px;
+                }
+                &:hover img {
+                    display: block;
+                    position: absolute;
+                    width: 15%;
+                    top: 30px;
+                    right: 30px;
+                }
+            }
+        }
+        .senseContainer {
+            @include containerGuide;
+            .senseImg {
+                @include guideImg;
+                padding-left: 50px;
+                width: 80%;
+            }
+        }
+        .senseCast {
+            .wrap {
+                @include castWrap;
+            }
+        }
+        .sensefilmPlace {
+            .wrap .item .text {
+                @include filmText;
+            }
+        }
+        .sensefilmPlace-2 {
+            .wrap .item .text {
+                @include filmText;
+            }
+        }
+    }
+}

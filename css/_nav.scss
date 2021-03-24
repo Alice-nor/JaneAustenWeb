@@ -1,0 +1,116 @@
+.header {
+    background-color: $p-color;
+    height: 50px;
+    // logo 的部分
+    img {
+        @include square(40px);
+        padding: 10px;
+    }
+    // 選單的部分
+    .menu_btn {
+        @include square(60px);
+        display: block;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 2px;
+        &::before {
+            content: '';
+            position: absolute;
+            margin: auto;
+            width: 40px;
+            height: 3px;
+            background-color: gray;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            box-shadow: 0px 15px 0px gray, 0px -15px 0px gray;
+        }
+        span {
+            opacity: 0;
+            @include square(1px);
+            display: block;
+            overflow: hidden;
+        }
+    }
+    // nav 的部分
+    nav {
+        width: $width;
+        height: 100vh;
+        background-color: $p-color;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        font-family: $text;
+        transition: .5s;
+        .navlist {
+            background-color: $p-color;
+            a {
+                display: block;
+                text-decoration: none;
+                padding: 20px 20px;
+                color: $text-color;
+                border-bottom: 3px double gray;
+            }
+            .navlist-item-novel {
+                display: none;
+                a::before {
+                    content: '/ ';
+                }
+            }
+        }
+    }
+}
+
+#menu_control {
+    position: absolute;
+    z-index: -2;
+    display: none;
+}
+
+#menu_control:checked~.header nav {
+    left: 0;
+}
+
+
+/* 平板與電腦的尺寸 */
+
+@media screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        .logo {
+            display: none;
+        }
+        nav {
+            position: relative;
+            display: flex;
+            width: auto;
+            height: auto;
+            top: 0;
+            left: 50px;
+            .navlist {
+                display: flex;
+                .navlist-item:hover .navlist-item-novel {
+                    display: block;
+                    background-color: rgba(255, 255, 255, 0.8)
+                }
+                a {
+                    padding: 10px 10px;
+                    border-bottom: none;
+                    background-color: transparent;
+                }
+                .navlist-item-novel {
+                    display: none;
+                    a {
+                        &::before {
+                            content: '';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header .menu_btn {
+        display: none;
+    }
+}

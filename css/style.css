@@ -1,1333 +1,1522 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-body {
-    background-color: #fae6dd;
-    position: relative;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .header {
-    background-color: #fae6dd;
-}
-
-.header nav {
-    width: 100%;
-    height: 100vh;
-    background-color: #fae6dd;
-    position: absolute;
-    top: 60px;
-    left: -100%;
-    font-family: 'Times New Roman', Times, serif;
-    transition: .5s;
-}
-
-.header nav .navlist {
-    background-color: #fae6dd;
+  background-color: #fae6dd;
+  height: 50px;
 }
 
 .header img {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-}
-
-#menu_control:checked~.header nav {
-    left: 0;
-}
-
-.header .navlist a {
-    display: block;
-    text-decoration: none;
-    padding: 20px 20px;
-    color: black;
-    border-bottom: 3px double gray;
-}
-
-.navlist-item-novel a::before {
-    content: '/ ';
-}
-
-#menu_control {
-    position: absolute;
-    z-index: -2;
-    display: none;
-}
-
-.navlist-item-novel {
-    display: none;
-}
-
-.header {
-    height: 50px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
 }
 
 .header .menu_btn {
-    width: 60px;
-    height: 60px;
-    display: block;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    right: 2px;
-}
-
-.header .menu_btn span {
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-    display: block;
-    overflow: hidden;
+  width: 60px;
+  height: 60px;
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 2px;
 }
 
 .header .menu_btn::before {
-    content: '';
-    position: absolute;
-    margin: auto;
-    width: 40px;
-    height: 3px;
-    background-color: gray;
-    left: 10px;
-    top: 0;
-    bottom: 0;
-    box-shadow: 0px 15px 0px gray, 0px -15px 0px gray;
+  content: '';
+  position: absolute;
+  margin: auto;
+  width: 40px;
+  height: 3px;
+  background-color: gray;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0px 15px 0px gray, 0px -15px 0px gray;
+          box-shadow: 0px 15px 0px gray, 0px -15px 0px gray;
 }
 
-
-/* index & bio */
-
-.container {
-    /* 不小心加入下面這行會壞掉！ */
-    /* position: absolute; */
-    top: 60px;
-}
-
-.container img {
-    width: 100%;
-}
-
-.container {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    margin: auto;
-    margin: 10px;
-}
-
-.guide {
-    text-align: center;
-    width: 100%;
-}
-
-.img {
-    padding: 5px;
-    margin: auto;
-}
-
-.bioImg {
-    padding: 30px 0px;
-    margin: auto;
-}
-
-h1 {
-    padding: 10px;
-    font-family: 'Noto Serif', serif;
-    color: black;
-    text-shadow: 3px 3px 0px white;
-    line-height: 120%;
-    transition: ease-in 0.5s;
-}
-
-h3 {
-    padding: 5px;
-    font-family: 'Noto Serif', serif;
-    margin: 4px;
-    line-height: 140%;
-    transition: ease-in 0.5s;
-}
-
-p {
-    /* border: 5px black solid; */
-    text-align: left;
-    padding: 10px 40px;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 180%;
-}
-
-
-/* emma */
-
-.emmaContainer {
-    top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    margin: 10px 0px;
-}
-
-.emmaContainer img {
-    width: 100%;
-}
-
-.emmaGuide {
-    text-align: center;
-    width: 70%;
-}
-
-.emmaGuide p {
-    text-align: left;
-    padding: 0px 0px;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 180%;
-}
-
-.emmaImg {
-    padding: 30px 0px;
-    margin: auto;
-    display: none;
-}
-
-.emmaImg2 {
-    display: block;
-    padding: 30px 0px;
-    margin: auto;
-}
-
-
-/* pride and prejudice */
-
-.prideContainer {
-    top: 60px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    margin: 10px 0px;
-}
-
-.prideContainer img {
-    width: 100%;
-}
-
-.prideGuide {
-    text-align: center;
-    width: 70%;
-}
-
-.prideGuide p {
-    text-align: left;
-    padding: 0px 0px;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 180%;
-}
-
-.prideImg {
-    display: block;
-    padding-top: 30px;
-    padding-bottom: 0;
-    margin: auto;
-}
-
-
-/* Sense & Sensibility */
-
-.senseContainer {
-    top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    margin: 10px 0px;
-}
-
-.senseContainer img {
-    width: 100%;
-}
-
-.senseGuide {
-    text-align: center;
-    width: 70%;
-}
-
-.senseGuide p {
-    text-align: left;
-    padding: 0px 0px;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 180%;
-}
-
-.senseImg {
-    padding: 30px 0px;
-    margin: auto;
-}
-
-
-/* emma cast */
-
-.cast {
-    width: 100%;
-    margin: 50px 0px;
-    padding: 30px 0px;
-    box-sizing: border-box;
-    background-image: url(../images/BroughtonCastle.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
-
-.cast .wrap {
-    width: 80%;
-    margin: auto;
-}
-
-.cast h3 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.cast .wrap .actor {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 20px 10px;
-    margin: 40px 13px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    border: 4px double #fae6dd;
-    box-shadow: 2px 2px 5px black;
-    box-sizing: border-box;
-    transition: .7s;
-}
-
-.cast .wrap .actor:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 3px 10px #fae6dd;
-}
-
-.actor img {
-    width: 90%;
-    border-radius: 50%;
-}
-
-.actor p {
-    color: seashell;
-    text-align: center;
-    padding: 20px 20px;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 180%;
-    /* border: 3px solid red; */
-}
-
-
-/* pride & prejudice */
-
-.pridecast {
-    width: 100%;
-    margin: 50px 0px;
-    padding: 30px 0px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, .5);
-    background-image: url(../images/Chatsworth.jpg);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.pridecast .wrap {
-    width: 80%;
-    margin: auto;
-}
-
-.pridecast h3 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    color: white;
-}
-
-.pridecast .wrap .prideActor {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 20px 10px;
-    margin: 40px 13px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    border: 4px double #fae6dd;
-    box-shadow: 2px 2px 5px black;
-    box-sizing: border-box;
-    transition: .7s;
-}
-
-.pridecast .wrap .prideActor:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 3px 10px #fae6dd;
-}
-
-.prideActor img {
-    width: 90%;
-    border-radius: 50%;
-}
-
-.prideActor p {
-    color: seashell;
-    text-align: center;
-    padding: 20px 20px;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 180%;
-    /* border: 3px solid red; */
-}
-
-
-/* Sense & Sensibility */
-
-.senseCast {
-    width: 100%;
-    margin: 50px 0px;
-    padding: 30px 0px;
-    box-sizing: border-box;
-    background-image: url(../images/Efford\ House.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.senseCast .wrap {
-    width: 80%;
-    margin: auto;
-}
-
-.senseCast h3 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.senseCast .wrap .senseActor {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 20px 10px;
-    margin: 40px 13px;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: relative;
-    border: 4px double #fae6dd;
-    box-shadow: 2px 2px 5px black;
-    box-sizing: border-box;
-    transition: .7s;
-}
-
-.senseCast .wrap .senseActor:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 3px 10px #fae6dd;
-}
-
-.senseCast img {
-    width: 90%;
-    border-radius: 50%;
-}
-
-.senseCast p {
-    color: seashell;
-    text-align: center;
-    padding: 20px 20px;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 180%;
-    /* border: 3px solid red; */
-}
-
-
-/* emma filePlace */
-
-.filmPlace {
-    width: 100%;
-    height: 700px;
-    margin: 40px 0px;
-}
-
-.filmPlace .wrap {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    background: url('../images/SudeleyCastle1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* border: 3px solid green; */
-}
-
-.filmPlace .wrap .item {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    position: relative;
-    /* border: 3px solid blue; */
-}
-
-.filmPlace .wrap .item .text {
-    width: 100%;
-    height: 30%;
-    /* border: 3px solid yellow; */
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s ease-in;
-}
-
-.filmPlace .wrap .item .text:hover {
-    height: 70%;
-    border-radius: 0%;
-    border: 4px double #fae6dd;
-    color: white;
-}
-
-.filmPlace .wrap .item .text:hover p {
-    display: block;
-}
-
-.filmPlace .wrap .item .text h3,
-.filmPlace .wrap .item .text h2,
-.filmPlace .wrap .item .text p {
-    text-align: center;
-    color: seashell;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.filmPlace .wrap .item .text h3 {
-    margin-top: 15px;
-    margin-bottom: -15px;
-    font-size: 1rem;
-}
-
-.filmPlace .wrap .item .text h2 {
-    line-height: 180%;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.filmPlace .wrap .item .text p {
-    display: none;
-}
-
-.filmPlace-2 {
-    width: 100%;
-    height: 700px;
-    margin: 40px 0px;
-}
-
-.filmPlace-2 .wrap {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    background: url('../images/StanwayHouse 2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* border: 3px solid green; */
-}
-
-.filmPlace-2 .wrap .item {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    /* border: 1px solid red; */
-    position: relative;
-}
-
-.filmPlace-2 .wrap .item .text {
-    width: 100%;
-    height: 30%;
-    /* border: 3px solid yellow; */
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s ease-in-out;
-}
-
-.filmPlace-2 .wrap .item .text:hover {
-    height: 70%;
-    border-radius: 0%;
-    border: 4px double #fae6dd;
-    color: white;
-}
-
-.filmPlace-2 .wrap .item .text:hover p {
-    display: block;
-}
-
-.filmPlace-2 .wrap .item .text h3,
-.filmPlace-2 .wrap .item .text h2,
-.filmPlace-2 .wrap .item .text p {
-    text-align: center;
-    color: seashell;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.filmPlace-2 .wrap .item .text h3 {
-    margin-top: 15px;
-    margin-bottom: -15px;
-    font-size: 1rem;
-}
-
-.filmPlace-2 .wrap .item .text h2 {
-    line-height: 180%;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.filmPlace-2 .wrap .item .text p {
-    display: none;
-}
-
-
-/* pride and prejudice */
-
-.prideFilmPlace {
-    width: 100%;
-    height: 700px;
-    margin: 40px 0px;
-}
-
-.prideFilmPlace .wrap {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    background: url('../images/chatsworthHouse.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* border: 3px solid green; */
-}
-
-.prideFilmPlace .wrap .item {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    position: relative;
-    /* border: 3px solid blue; */
-}
-
-.prideFilmPlace .wrap .item .text {
-    width: 100%;
-    height: 30%;
-    /* border: 3px solid yellow; */
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s ease-in;
-}
-
-.prideFilmPlace .wrap .item .text:hover {
-    height: 70%;
-    border-radius: 0%;
-    border: 4px double #fae6dd;
-    color: white;
-}
-
-.prideFilmPlace .wrap .item .text:hover p {
-    display: block;
-}
-
-.prideFilmPlace .wrap .item .text h3,
-.prideFilmPlace .wrap .item .text h2,
-.prideFilmPlace .wrap .item .text p {
-    text-align: center;
-    color: seashell;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.prideFilmPlace .wrap .item .text h3 {
-    margin-top: 15px;
-    margin-bottom: -15px;
-    font-size: 1rem;
-}
-
-.prideFilmPlace .wrap .item .text h2 {
-    line-height: 180%;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.prideFilmPlace .wrap .item .text p {
-    display: none;
-}
-
-.prideFilmPlace-2 {
-    width: 100%;
-    height: 700px;
-    margin: 40px 0px;
-}
-
-.prideFilmPlace-2 .wrap {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    background: url('../images/stangeEdge.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* border: 3px solid green; */
-}
-
-.prideFilmPlace-2 .wrap .item {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    /* border: 1px solid red; */
-    position: relative;
-}
-
-.prideFilmPlace-2 .wrap .item .text {
-    width: 100%;
-    height: 30%;
-    /* border: 3px solid yellow; */
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s ease-in-out;
-}
-
-.prideFilmPlace-2 .wrap .item .text:hover {
-    height: 70%;
-    border-radius: 0%;
-    border: 4px double #fae6dd;
-    color: white;
-}
-
-.prideFilmPlace-2 .wrap .item .text:hover p {
-    display: block;
-}
-
-.prideFilmPlace-2 .wrap .item .text h3,
-.prideFilmPlace-2 .wrap .item .text h2,
-.prideFilmPlace-2 .wrap .item .text p {
-    text-align: center;
-    color: seashell;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.prideFilmPlace-2 .wrap .item .text h3 {
-    margin-top: 15px;
-    margin-bottom: -15px;
-    font-size: 1rem;
-}
-
-.prideFilmPlace-2 .wrap .item .text h2 {
-    line-height: 180%;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.prideFilmPlace-2 .wrap .item .text p {
-    display: none;
-}
-
-
-/* filmPlace-3 */
-
-.prideFilmPlace-3 {
-    width: 100%;
-    height: 700px;
-    margin: 40px 0px;
-}
-
-.prideFilmPlace-3 .wrap {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    background: url('../images/Forest.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* border: 3px solid green; */
-}
-
-.prideFilmPlace-3 .wrap .item {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    position: relative;
-    /* border: 3px solid blue; */
-}
-
-.prideFilmPlace-3 .wrap .item .text {
-    width: 100%;
-    height: 30%;
-    /* border: 3px solid yellow; */
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s ease-in;
-}
-
-.prideFilmPlace-3 .wrap .item .text:hover {
-    height: 70%;
-    border-radius: 0%;
-    border: 4px double #fae6dd;
-    color: white;
-}
-
-.prideFilmPlace-3 .wrap .item .text:hover p {
-    display: block;
-}
-
-.prideFilmPlace-3 .wrap .item .text h3,
-.prideFilmPlace-3 .wrap .item .text h2,
-.prideFilmPlace-3 .wrap .item .text p {
-    text-align: center;
-    color: seashell;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.prideFilmPlace-3 .wrap .item .text h3 {
-    margin-top: 15px;
-    margin-bottom: -15px;
-    font-size: 1rem;
-}
-
-.prideFilmPlace-3 .wrap .item .text h2 {
-    line-height: 180%;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.prideFilmPlace-3 .wrap .item .text p {
-    display: none;
-}
-
-.prideFilmPlace-3 img {
-    display: none;
-}
-
-
-/* Sense & Sensibility */
-
-
-/* emma filePlace */
-
-.sensefilmPlace {
-    width: 100%;
-    height: 700px;
-    margin: 40px 0px;
-}
-
-.sensefilmPlace .wrap {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    background: url('../images/SaltramHouse.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center right;
-    /* border: 3px solid green; */
-}
-
-.sensefilmPlace .wrap .item {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    position: relative;
-    /* border: 3px solid blue; */
-}
-
-.sensefilmPlace .wrap .item .text {
-    width: 100%;
-    height: 30%;
-    /* border: 3px solid yellow; */
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s ease-in;
-}
-
-.sensefilmPlace .wrap .item .text:hover {
-    height: 70%;
-    border-radius: 0%;
-    border: 4px double #fae6dd;
-    color: white;
-}
-
-.sensefilmPlace .wrap .item .text:hover p {
-    display: block;
-}
-
-.sensefilmPlace .wrap .item .text h3,
-.sensefilmPlace .wrap .item .text h2,
-.sensefilmPlace .wrap .item .text p {
-    text-align: center;
-    color: seashell;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.sensefilmPlace .wrap .item .text h3 {
-    margin-top: 15px;
-    margin-bottom: -15px;
-    font-size: 1rem;
-}
-
-.sensefilmPlace .wrap .item .text h2 {
-    line-height: 180%;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.sensefilmPlace .wrap .item .text p {
-    display: none;
-}
-
-.sensefilmPlace-2 {
-    width: 100%;
-    height: 700px;
-    margin: 40px 0px;
-}
-
-.sensefilmPlace-2 .wrap {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    background: url('../images/Barton\ Cottage.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* border: 3px solid green; */
-}
-
-.sensefilmPlace-2 .wrap .item {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    /* border: 1px solid red; */
-    position: relative;
-}
-
-.sensefilmPlace-2 .wrap .item .text {
-    width: 100%;
-    height: 30%;
-    /* border: 3px solid yellow; */
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .7s ease-in-out;
-}
-
-.sensefilmPlace-2 .wrap .item .text:hover {
-    height: 70%;
-    border-radius: 0%;
-    border: 4px double #fae6dd;
-    color: white;
+.header .menu_btn span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
 }
 
-.sensefilmPlace-2 .wrap .item .text:hover p {
-    display: block;
+.header nav {
+  width: 100%;
+  height: 100vh;
+  background-color: #fae6dd;
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.sensefilmPlace-2 .wrap .item .text h3,
-.sensefilmPlace-2 .wrap .item .text h2,
-.sensefilmPlace-2 .wrap .item .text p {
-    text-align: center;
-    color: seashell;
-    font-family: 'Times New Roman', Times, serif;
+.header nav .navlist {
+  background-color: #fae6dd;
 }
 
-.sensefilmPlace-2 .wrap .item .text h3 {
-    margin-top: 15px;
-    margin-bottom: -15px;
-    font-size: 1rem;
+.header nav .navlist a {
+  display: block;
+  text-decoration: none;
+  padding: 20px 20px;
+  color: black;
+  border-bottom: 3px double gray;
 }
 
-.sensefilmPlace-2 .wrap .item .text h2 {
-    line-height: 180%;
-    margin-top: 10px;
-    margin-bottom: 0px;
+.header nav .navlist .navlist-item-novel {
+  display: none;
 }
 
-.sensefilmPlace-2 .wrap .item .text p {
-    display: none;
+.header nav .navlist .navlist-item-novel a::before {
+  content: '/ ';
 }
 
-footer {
-    font-family: 'Times New Roman', Times, serif;
-    padding: 30px 0px;
-    color: tan;
+#menu_control {
+  position: absolute;
+  z-index: -2;
+  display: none;
 }
 
-footer p {
-    text-align: center;
+#menu_control:checked ~ .header nav {
+  left: 0;
 }
-
 
 /* 平板與電腦的尺寸 */
-
 @media screen and (min-width: 768px) {
-    .logo {
-        display: none;
-    }
-    .header .menu_btn {
-        display: none;
-    }
-    .header {
-        display: flex;
-    }
-    .header nav {
-        position: relative;
-        display: flex;
-        width: auto;
-        height: auto;
-        top: 0;
-        left: 50px;
-    }
-    .header .navlist a {
-        padding: 10px 10px;
-    }
-    .header nav .navlist {
-        display: flex;
-    }
-    .header .navlist a {
-        border-bottom: none;
-        background-color: transparent;
-    }
-    .navlist-item-novel {
-        display: none;
-    }
-    .navlist-item:hover .navlist-item-novel {
-        display: block;
-        background-color: rgba(255, 255, 255, 0.8)
-    }
-    .navlist-item-novel a::before {
-        content: '';
-    }
-    /* index & bio */
-    .container {
-        flex-direction: row;
-    }
-    .guide {
-        padding: 0px 5%;
-    }
-    .img {
-        width: 100%;
-    }
-    .bioImg {
-        padding: 30px 0;
-        padding-right: 40px;
-        width: 100%;
-    }
-    /* emma */
-    .emmaContainer {
-        flex-direction: row;
-    }
-    .emmaGuide {
-        padding: 0px 5%;
-    }
-    .emmaImg {
-        display: block;
-        padding: 30px 0;
-        width: 100%;
-    }
-    .emmaImg2 {
-        width: 100%;
-        display: none;
-    }
-    /* pride & prejudice */
-    .prideContainer {
-        flex-direction: row;
-    }
-    .prideGuide {
-        padding: 0px 5%;
-    }
-    .prideImg {
-        display: block;
-        padding: 30px 70px;
-        width: 70%;
-    }
-    /* Sense & Sensibility */
-    .senseContainer {
-        flex-direction: row;
-    }
-    .senseGuide {
-        padding: 0px 5%;
-    }
-    .senseImg {
-        display: block;
-        padding: 30px 0px;
-        padding-left: 50px;
-        width: 80%;
-    }
-    /* emma */
-    .cast .wrap {
-        display: flex;
-        width: 80%;
-        height: 100%;
-        /* border: 3px solid green; */
-        padding: 50px;
-    }
-    .cast .wrap .actor {
-        width: 20%;
-        margin: auto;
-    }
-    /* pride & prejudice */
-    .pridecast .wrap {
-        display: flex;
-        width: 80%;
-        height: 100%;
-        /* border: 3px solid green; */
-        padding: 50px;
-    }
-    .pridecast .wrap .prideActor {
-        width: 20%;
-        margin: auto;
-    }
-    /* Sense & Sensibility */
-    .senseCast .wrap {
-        display: flex;
-        width: 80%;
-        height: 100%;
-        /* border: 3px solid green; */
-        padding: 50px;
-    }
-    .senseCast .wrap .senseActor {
-        width: 20%;
-        margin: auto;
-    }
-    /* emma */
-    .filmPlace .wrap .item .text {
-        width: 40%;
-        height: 30%;
-        right: 0px;
-    }
-    .filmPlace .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .filmPlace .wrap .item .text:hover h3 {
-        font-size: 2rem;
-    }
-    .filmPlace .wrap .item .text:hover h2 {
-        font-size: 3rem;
-    }
-    .filmPlace .wrap .item .text:hover p {
-        font-size: 1.3rem;
-        padding: 0px 120px;
-    }
-    /* filmPlace-2 */
-    .filmPlace-2 .wrap .item .text {
-        width: 40%;
-        height: 30%;
-        right: 0px;
-    }
-    .filmPlace-2 .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .filmPlace-2 .wrap .item .text:hover h3 {
-        font-size: 2rem;
-    }
-    .filmPlace-2 .wrap .item .text:hover h2 {
-        font-size: 3rem;
-    }
-    .filmPlace-2 .wrap .item .text:hover p {
-        font-size: 1.3rem;
-        padding: 0px 120px;
-    }
-    /* pride & prejudice */
-    .prideFilmPlace .wrap .item .text {
-        width: 40%;
-        height: 30%;
-        right: 0px;
-    }
-    .prideFilmPlace .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .prideFilmPlace .wrap .item .text:hover h3 {
-        font-size: 2rem;
-    }
-    .prideFilmPlace .wrap .item .text:hover h2 {
-        font-size: 3rem;
-    }
-    .prideFilmPlace .wrap .item .text:hover p {
-        font-size: 1.3rem;
-        padding: 0px 120px;
-    }
-    /* filmPlace-2 */
-    .prideFilmPlace-2 .wrap .item .text {
-        width: 40%;
-        height: 30%;
-        right: 0px;
-    }
-    .prideFilmPlace-2 .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .prideFilmPlace-2 .wrap .item .text:hover h3 {
-        font-size: 2rem;
-    }
-    .prideFilmPlace-2 .wrap .item .text:hover h2 {
-        font-size: 3rem;
-    }
-    .prideFilmPlace-2 .wrap .item .text:hover p {
-        font-size: 1.3rem;
-        padding: 0px 120px;
-    }
-    /* filmPlace-3 */
-    .prideFilmPlace-3 .wrap .item .text {
-        width: 40%;
-        height: 30%;
-        right: 0px;
-    }
-    .prideFilmPlace-3 .wrap .item .text h2 {
-        padding: 20px;
-    }
-    .prideFilmPlace-3 .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .prideFilmPlace-3 .wrap .item .text:hover h3 {
-        font-size: 2rem;
-    }
-    .prideFilmPlace-3 .wrap .item .text:hover h2 {
-        font-size: 3rem;
-    }
-    .prideFilmPlace-3 .wrap .item .text:hover p {
-        font-size: 1.3rem;
-        padding: 0px 120px;
-    }
-    .prideFilmPlace-3 .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .prideFilmPlace-3 .wrap .item .text:hover img {
-        display: block;
-        position: absolute;
-        width: 15%;
-        top: 30px;
-        right: 30px;
-    }
-    /* Sense & Sensibility */
-    .sensefilmPlace .wrap .item .text {
-        width: 40%;
-        height: 30%;
-        right: 0px;
-    }
-    .sensefilmPlace .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .sensefilmPlace .wrap .item .text:hover h3 {
-        font-size: 2rem;
-    }
-    .sensefilmPlace .wrap .item .text:hover h2 {
-        font-size: 3rem;
-    }
-    .sensefilmPlace .wrap .item .text:hover p {
-        font-size: 1.3rem;
-        padding: 0px 120px;
-    }
-    /* filmPlace-2 */
-    .sensefilmPlace-2 .wrap .item .text {
-        width: 40%;
-        height: 30%;
-        right: 0px;
-    }
-    .sensefilmPlace-2 .wrap .item .text:hover {
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        bottom: 50px;
-        border-radius: 0%;
-        padding: 20px 0px;
-    }
-    .sensefilmPlace-2 .wrap .item .text:hover h3 {
-        font-size: 2rem;
-    }
-    .sensefilmPlace-2 .wrap .item .text:hover h2 {
-        font-size: 3rem;
-    }
-    .sensefilmPlace-2 .wrap .item .text:hover p {
-        font-size: 1.3rem;
-        padding: 0px 120px;
-    }
-    footer p {
-        text-align: center;
-    }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .logo {
+    display: none;
+  }
+  .header nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 50px;
+  }
+  .header nav .navlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header nav .navlist .navlist-item:hover .navlist-item-novel {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .header nav .navlist a {
+    padding: 10px 10px;
+    border-bottom: none;
+    background-color: transparent;
+  }
+  .header nav .navlist .navlist-item-novel {
+    display: none;
+  }
+  .header nav .navlist .navlist-item-novel a::before {
+    content: '';
+  }
+  .header .menu_btn {
+    display: none;
+  }
 }
+
+body {
+  background-color: #fae6dd;
+  position: relative;
+  height: 100%;
+}
+
+body .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 60px;
+}
+
+body .container .img {
+  padding: 5px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .img img {
+  width: 90%;
+}
+
+body .container .bioImg {
+  padding: 30px 0px;
+  margin: auto;
+}
+
+body .container .bioImg img {
+  width: 100%;
+}
+
+body .container .guide {
+  text-align: center;
+  width: 70%;
+}
+
+body .container .guide h1 {
+  font-family: "Noto Serif", serif;
+  color: black;
+  text-shadow: 3px 3px 0px white;
+  line-height: 120%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  padding: 10px;
+}
+
+body .container .guide h3 {
+  font-family: "Noto Serif", serif;
+  padding: 5px 0px;
+  margin: 4px;
+  line-height: 140%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+body .container .guide p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  line-height: 180%;
+}
+
+body .container .guide p {
+  padding: 10px 5px;
+}
+
+body .emmaContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 60px;
+  margin: auto;
+  width: 100%;
+  margin: 10px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .emmaContainer .emmaImg {
+  padding: 30px 0px;
+  margin: auto;
+  display: none;
+}
+
+body .emmaContainer .emmaImg img {
+  width: 100%;
+}
+
+body .emmaContainer .emmaImg2 {
+  display: block;
+  padding: 30px 0px;
+  margin: auto;
+}
+
+body .emmaContainer .emmaImg2 img {
+  width: 100%;
+}
+
+body .emmaContainer .guide {
+  text-align: center;
+  width: 70%;
+}
+
+body .emmaContainer .guide h1 {
+  font-family: "Noto Serif", serif;
+  color: black;
+  text-shadow: 3px 3px 0px white;
+  line-height: 120%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  padding: 10px;
+}
+
+body .emmaContainer .guide h3 {
+  font-family: "Noto Serif", serif;
+  padding: 5px 0px;
+  margin: 4px;
+  line-height: 140%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+body .emmaContainer .guide p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  line-height: 180%;
+}
+
+body .cast {
+  width: 100%;
+  margin: 50px 0px;
+  padding: 30px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-image: url(../images/BroughtonCastle.png);
+}
+
+body .cast h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif", serif;
+}
+
+body .cast .wrap {
+  width: 80%;
+  margin: auto;
+}
+
+body .cast .wrap .actor {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 20px 10px;
+  margin: 40px 13px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  border: 4px double #fae6dd;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+body .cast .wrap .actor img {
+  width: 90%;
+  border-radius: 50%;
+}
+
+body .cast .wrap .actor p {
+  color: seashell;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+}
+
+body .cast .wrap .actor:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 3px 3px 10px #fae6dd;
+          box-shadow: 3px 3px 10px #fae6dd;
+}
+
+body .filmPlace {
+  width: 100%;
+  height: 700px;
+  margin: 40px 0px;
+}
+
+body .filmPlace .wrap {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body .filmPlace .wrap .item {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+body .filmPlace .wrap .text {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+}
+
+body .filmPlace .wrap .text h3 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-size: 1rem;
+}
+
+body .filmPlace .wrap .text h2 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+body .filmPlace .wrap .text p {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  line-height: 180%;
+  padding: 10px 40px;
+}
+
+body .filmPlace .wrap .text:hover {
+  height: 70%;
+  border-radius: 0%;
+  border: 4px double #fae6dd;
+  color: white;
+}
+
+body .filmPlace .wrap .text:hover p {
+  display: block;
+}
+
+body .filmPlace .wrap {
+  background-position: center center !important;
+  background: url("../images/SudeleyCastle1.jpg");
+}
+
+body .filmPlace-2 {
+  width: 100%;
+  height: 700px;
+  margin: 40px 0px;
+}
+
+body .filmPlace-2 .wrap {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body .filmPlace-2 .wrap .item {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+body .filmPlace-2 .wrap .text {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+}
+
+body .filmPlace-2 .wrap .text h3 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-size: 1rem;
+}
+
+body .filmPlace-2 .wrap .text h2 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+body .filmPlace-2 .wrap .text p {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  line-height: 180%;
+  padding: 10px 40px;
+}
+
+body .filmPlace-2 .wrap .text:hover {
+  height: 70%;
+  border-radius: 0%;
+  border: 4px double #fae6dd;
+  color: white;
+}
+
+body .filmPlace-2 .wrap .text:hover p {
+  display: block;
+}
+
+body .filmPlace-2 .wrap {
+  background-position: center center !important;
+  background: url("../images/StanwayHouse 2.jpg");
+}
+
+body .prideContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 60px;
+  margin: auto;
+  width: 100%;
+  margin: 10px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+body .prideContainer .guide {
+  text-align: center;
+  width: 70%;
+}
+
+body .prideContainer .guide h1 {
+  font-family: "Noto Serif", serif;
+  color: black;
+  text-shadow: 3px 3px 0px white;
+  line-height: 120%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  padding: 10px;
+}
+
+body .prideContainer .guide h3 {
+  font-family: "Noto Serif", serif;
+  padding: 5px 0px;
+  margin: 4px;
+  line-height: 140%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+body .prideContainer .guide p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  line-height: 180%;
+}
+
+body .prideContainer .prideImg {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 0;
+  margin: auto;
+}
+
+body .prideContainer .prideImg img {
+  width: 100%;
+}
+
+body .pridecast {
+  width: 100%;
+  margin: 50px 0px;
+  padding: 30px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-image: url(../images/Chatsworth.jpg);
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center center;
+}
+
+body .pridecast h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif", serif;
+}
+
+body .pridecast .wrap {
+  width: 80%;
+  margin: auto;
+}
+
+body .pridecast .wrap .actor {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 20px 10px;
+  margin: 40px 13px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  border: 4px double #fae6dd;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+body .pridecast .wrap .actor img {
+  width: 90%;
+  border-radius: 50%;
+}
+
+body .pridecast .wrap .actor p {
+  color: seashell;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+}
+
+body .pridecast .wrap .actor:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 3px 3px 10px #fae6dd;
+          box-shadow: 3px 3px 10px #fae6dd;
+}
+
+body .pridecast h3 {
+  color: white;
+}
+
+body .prideFilmPlace {
+  width: 100%;
+  height: 700px;
+  margin: 40px 0px;
+}
+
+body .prideFilmPlace .wrap {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body .prideFilmPlace .wrap .item {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+body .prideFilmPlace .wrap .text {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+}
+
+body .prideFilmPlace .wrap .text h3 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-size: 1rem;
+}
+
+body .prideFilmPlace .wrap .text h2 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+body .prideFilmPlace .wrap .text p {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  line-height: 180%;
+  padding: 10px 40px;
+}
+
+body .prideFilmPlace .wrap .text:hover {
+  height: 70%;
+  border-radius: 0%;
+  border: 4px double #fae6dd;
+  color: white;
+}
+
+body .prideFilmPlace .wrap .text:hover p {
+  display: block;
+}
+
+body .prideFilmPlace .wrap {
+  background-position: center center !important;
+  background: url("../images/chatsworthHouse.jpg");
+}
+
+body .prideFilmPlace-2 {
+  width: 100%;
+  height: 700px;
+  margin: 40px 0px;
+}
+
+body .prideFilmPlace-2 .wrap {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body .prideFilmPlace-2 .wrap .item {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+body .prideFilmPlace-2 .wrap .text {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+}
+
+body .prideFilmPlace-2 .wrap .text h3 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-size: 1rem;
+}
+
+body .prideFilmPlace-2 .wrap .text h2 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+body .prideFilmPlace-2 .wrap .text p {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  line-height: 180%;
+  padding: 10px 40px;
+}
+
+body .prideFilmPlace-2 .wrap .text:hover {
+  height: 70%;
+  border-radius: 0%;
+  border: 4px double #fae6dd;
+  color: white;
+}
+
+body .prideFilmPlace-2 .wrap .text:hover p {
+  display: block;
+}
+
+body .prideFilmPlace-2 .wrap {
+  background-position: center center !important;
+  background: url("../images/stangeEdge.jpg");
+}
+
+body .prideFilmPlace-3 {
+  width: 100%;
+  height: 700px;
+  margin: 40px 0px;
+}
+
+body .prideFilmPlace-3 .wrap {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body .prideFilmPlace-3 .wrap .item {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+body .prideFilmPlace-3 .wrap .text {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+}
+
+body .prideFilmPlace-3 .wrap .text h3 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-size: 1rem;
+}
+
+body .prideFilmPlace-3 .wrap .text h2 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+body .prideFilmPlace-3 .wrap .text p {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  line-height: 180%;
+  padding: 10px 40px;
+}
+
+body .prideFilmPlace-3 .wrap .text:hover {
+  height: 70%;
+  border-radius: 0%;
+  border: 4px double #fae6dd;
+  color: white;
+}
+
+body .prideFilmPlace-3 .wrap .text:hover p {
+  display: block;
+}
+
+body .prideFilmPlace-3 .wrap {
+  background-position: center center !important;
+  background: url("../images/Forest.jpg");
+}
+
+body .prideFilmPlace-3 .wrap img {
+  display: none;
+}
+
+body .senseContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 60px;
+  margin: auto;
+  width: 100%;
+  margin: 10px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .senseContainer .senseImg {
+  padding: 30px 0px;
+  margin: auto;
+}
+
+body .senseContainer .senseImg img {
+  width: 100%;
+}
+
+body .senseContainer .guide {
+  text-align: center;
+  width: 70%;
+}
+
+body .senseContainer .guide h1 {
+  font-family: "Noto Serif", serif;
+  color: black;
+  text-shadow: 3px 3px 0px white;
+  line-height: 120%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  padding: 10px;
+}
+
+body .senseContainer .guide h3 {
+  font-family: "Noto Serif", serif;
+  padding: 5px 0px;
+  margin: 4px;
+  line-height: 140%;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+body .senseContainer .guide p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  line-height: 180%;
+}
+
+body .senseCast {
+  width: 100%;
+  margin: 50px 0px;
+  padding: 30px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-image: url(../images/EffordHouse.png);
+}
+
+body .senseCast h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif", serif;
+}
+
+body .senseCast .wrap {
+  width: 80%;
+  margin: auto;
+}
+
+body .senseCast .wrap .actor {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 20px 10px;
+  margin: 40px 13px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  border: 4px double #fae6dd;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+body .senseCast .wrap .actor img {
+  width: 90%;
+  border-radius: 50%;
+}
+
+body .senseCast .wrap .actor p {
+  color: seashell;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+}
+
+body .senseCast .wrap .actor:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 3px 3px 10px #fae6dd;
+          box-shadow: 3px 3px 10px #fae6dd;
+}
+
+body .sensefilmPlace {
+  width: 100%;
+  height: 700px;
+  margin: 40px 0px;
+}
+
+body .sensefilmPlace .wrap {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body .sensefilmPlace .wrap .item {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+body .sensefilmPlace .wrap .text {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+}
+
+body .sensefilmPlace .wrap .text h3 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-size: 1rem;
+}
+
+body .sensefilmPlace .wrap .text h2 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+body .sensefilmPlace .wrap .text p {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  line-height: 180%;
+  padding: 10px 40px;
+}
+
+body .sensefilmPlace .wrap .text:hover {
+  height: 70%;
+  border-radius: 0%;
+  border: 4px double #fae6dd;
+  color: white;
+}
+
+body .sensefilmPlace .wrap .text:hover p {
+  display: block;
+}
+
+body .sensefilmPlace .wrap {
+  background-position: center right !important;
+  background: url("../images/SaltramHouse.jpg");
+}
+
+body .sensefilmPlace-2 {
+  width: 100%;
+  height: 700px;
+  margin: 40px 0px;
+}
+
+body .sensefilmPlace-2 .wrap {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body .sensefilmPlace-2 .wrap .item {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+body .sensefilmPlace-2 .wrap .text {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+}
+
+body .sensefilmPlace-2 .wrap .text h3 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-size: 1rem;
+}
+
+body .sensefilmPlace-2 .wrap .text h2 {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+body .sensefilmPlace-2 .wrap .text p {
+  text-align: center;
+  color: seashell;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  line-height: 180%;
+  padding: 10px 40px;
+}
+
+body .sensefilmPlace-2 .wrap .text:hover {
+  height: 70%;
+  border-radius: 0%;
+  border: 4px double #fae6dd;
+  color: white;
+}
+
+body .sensefilmPlace-2 .wrap .text:hover p {
+  display: block;
+}
+
+body .sensefilmPlace-2 .wrap {
+  background-position: center center !important;
+  background: url("../images/Barton Cottage.jpg");
+}
+
+body footer {
+  font-family: "Times New Roman", Times, serif;
+  color: tan;
+  padding: 50px 0px;
+}
+
+body footer p {
+  text-align: center;
+}
+
+/* 平板與電腦的尺寸 的@mixin */
+/* 平板與電腦的尺寸 */
+@media screen and (min-width: 768px) {
+  body .emmaContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .emmaContainer .guide {
+    padding: 0px 5%;
+  }
+  body .emmaContainer .emmaImg {
+    display: block;
+    padding: 30px 0;
+    width: 100%;
+  }
+  body .emmaContainer .emmaImg2 {
+    width: 100%;
+    display: none;
+  }
+  body .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .container .bioImg {
+    padding: 30px 0;
+    padding-right: 40px;
+    width: 100%;
+  }
+  body .container .guide {
+    padding: 0px 5%;
+  }
+  body .container .guide {
+    width: 90%;
+    padding: 0px 5%;
+  }
+  body .container .guide p {
+    padding: 10px 40px;
+  }
+  body .container .img {
+    width: 100%;
+  }
+  body .cast .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+  }
+  body .cast .wrap .actor {
+    width: 20%;
+    margin: auto;
+  }
+  body .filmPlace .wrap .item .text {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+  }
+  body .filmPlace .wrap .item .text:hover {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 0%;
+    padding: 20px 0px;
+  }
+  body .filmPlace .wrap .item .text:hover h3 {
+    font-size: 2rem;
+  }
+  body .filmPlace .wrap .item .text:hover h2 {
+    font-size: 3rem;
+  }
+  body .filmPlace .wrap .item .text:hover p {
+    font-size: 1.3rem;
+    padding: 0px 120px;
+  }
+  body .filmPlace-2 .wrap .item .text {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+  }
+  body .filmPlace-2 .wrap .item .text:hover {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 0%;
+    padding: 20px 0px;
+  }
+  body .filmPlace-2 .wrap .item .text:hover h3 {
+    font-size: 2rem;
+  }
+  body .filmPlace-2 .wrap .item .text:hover h2 {
+    font-size: 3rem;
+  }
+  body .filmPlace-2 .wrap .item .text:hover p {
+    font-size: 1.3rem;
+    padding: 0px 120px;
+  }
+  body .prideContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .prideContainer .guide {
+    padding: 0px 5%;
+  }
+  body .prideContainer .prideImg {
+    display: block;
+    padding: 30px 0;
+    width: 70%;
+  }
+  body .pridecast .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+  }
+  body .pridecast .wrap .actor {
+    width: 20%;
+    margin: auto;
+  }
+  body .prideFilmPlace .wrap .item .text {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+  }
+  body .prideFilmPlace .wrap .item .text:hover {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 0%;
+    padding: 20px 0px;
+  }
+  body .prideFilmPlace .wrap .item .text:hover h3 {
+    font-size: 2rem;
+  }
+  body .prideFilmPlace .wrap .item .text:hover h2 {
+    font-size: 3rem;
+  }
+  body .prideFilmPlace .wrap .item .text:hover p {
+    font-size: 1.3rem;
+    padding: 0px 120px;
+  }
+  body .prideFilmPlace-2 .wrap .item .text {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+  }
+  body .prideFilmPlace-2 .wrap .item .text:hover {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 0%;
+    padding: 20px 0px;
+  }
+  body .prideFilmPlace-2 .wrap .item .text:hover h3 {
+    font-size: 2rem;
+  }
+  body .prideFilmPlace-2 .wrap .item .text:hover h2 {
+    font-size: 3rem;
+  }
+  body .prideFilmPlace-2 .wrap .item .text:hover p {
+    font-size: 1.3rem;
+    padding: 0px 120px;
+  }
+  body .prideFilmPlace-3 .wrap .item .text {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+  }
+  body .prideFilmPlace-3 .wrap .item .text:hover {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 0%;
+    padding: 20px 0px;
+  }
+  body .prideFilmPlace-3 .wrap .item .text:hover h3 {
+    font-size: 2rem;
+  }
+  body .prideFilmPlace-3 .wrap .item .text:hover h2 {
+    font-size: 3rem;
+  }
+  body .prideFilmPlace-3 .wrap .item .text:hover p {
+    font-size: 1.3rem;
+    padding: 0px 120px;
+  }
+  body .prideFilmPlace-3 .wrap .item .text h2 {
+    padding: 20px;
+  }
+  body .prideFilmPlace-3 .wrap .item .text:hover img {
+    display: block;
+    position: absolute;
+    width: 15%;
+    top: 30px;
+    right: 30px;
+  }
+  body .senseContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .senseContainer .guide {
+    padding: 0px 5%;
+  }
+  body .senseContainer .senseImg {
+    display: block;
+    padding: 30px 0;
+    padding-left: 50px;
+    width: 80%;
+  }
+  body .senseCast .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+  }
+  body .senseCast .wrap .actor {
+    width: 20%;
+    margin: auto;
+  }
+  body .sensefilmPlace .wrap .item .text {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+  }
+  body .sensefilmPlace .wrap .item .text:hover {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 0%;
+    padding: 20px 0px;
+  }
+  body .sensefilmPlace .wrap .item .text:hover h3 {
+    font-size: 2rem;
+  }
+  body .sensefilmPlace .wrap .item .text:hover h2 {
+    font-size: 3rem;
+  }
+  body .sensefilmPlace .wrap .item .text:hover p {
+    font-size: 1.3rem;
+    padding: 0px 120px;
+  }
+  body .sensefilmPlace-2 .wrap .item .text {
+    width: 40%;
+    height: 30%;
+    right: 0px;
+  }
+  body .sensefilmPlace-2 .wrap .item .text:hover {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 0%;
+    padding: 20px 0px;
+  }
+  body .sensefilmPlace-2 .wrap .item .text:hover h3 {
+    font-size: 2rem;
+  }
+  body .sensefilmPlace-2 .wrap .item .text:hover h2 {
+    font-size: 3rem;
+  }
+  body .sensefilmPlace-2 .wrap .item .text:hover p {
+    font-size: 1.3rem;
+    padding: 0px 120px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
